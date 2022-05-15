@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PlatformTarget>x64</PlatformTarget>
+
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PublishTrimmed>false</PublishTrimmed>
+    <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+    
+    <!--
+        Enable aggressive trimming for assemblies marked as trimmable.
+        This is the default behavior for .NET 6 and above.
+        The line is only needed when targeting < .NET 6.
+    
+    <TrimMode>link</TrimMode>
+    -->
+    
+    <!--
+        Enable aggressive trimming for all assemblies.
+        This setting is new in .NET 6.
+    
+    <TrimmerDefaultAction>link</TrimmerDefaultAction>
+    -->
+</PropertyGroup>
+
+</Project>
